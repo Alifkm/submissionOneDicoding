@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  background-color: #222831;
+  position: sticky;
+  top: 0;
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #DDDDDD;
+  transition: transform .5s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+ul {
+  align-self: center;
+}
+
+.navBtn {
+  padding-right: 20px;
+}
+
+.burgerBtn {
+  cursor: pointer;
+  display: none;
+}
+
+.logo {
+  width: 70px;
+}
+
+.jumbotron {
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+  text-align: center;
+  color: #DDDDDD;
+}
+
+.jumbotron img {
+  filter: brightness(30%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+.jumbotron div {
+  position: relative;
+}
+
+.jumbotron div h1 {
+  font-size: 48px;
+}
+
+.jumbotron div p {
+  font-size: 18px;
+}
+
+#sentinel {
+  display: flex;
+  background-color: #F05454;
+  color: #DDDDDD;
+  padding: 50px 20px;
+  justify-content: center;
+}
+
+.sentinelLogo {
+  display: flex;
+  flex-basis: 40%;
+  justify-content: center;
+  align-items: center;
+}
+
+.sentinelInfo {
+  flex-basis: 60%;
+  align-self: center;
+  padding: 100px;
+}
+
+.jumbotron h1, .jumbotron p {
+  padding: 0 20px;
+}
+
+#agents {
+  padding: 20px 0;
+}
+
+#agents h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#agents img {
+  height: 500px;
+}
+
+.agent {
+  padding: 20px 20px;
+}
+
+.sage, .cypher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.killjoy, .chamber {
+  background-color: #30475E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: #DDDDDD;
+}
+
+.sage a, .cypher a {
+  color: black;
+}
+
+.killjoy a, .chamber a {
+  color: #DDDDDD;
+}
+
+.imgContainer {
+  display: flex;
+  flex-basis: 30%;
+  justify-content: center;
+}
+
+.imgContainer img, .sentinelLogo img {
+  transition: transform .5s ease;
+}
+
+.imgContainer img:hover, .sentinelLogo img:hover {
+  transform: scale(1.1);
+}
+
+.agentContainer {
+  flex-basis: 70%;
+}
+
+.agentContainer button {
+  border-radius: 5px;
+}
+
+.agentContainer a:hover, .agentContainer button:hover {
+  color: #F05454;
+  cursor: pointer;
+}
+
+.show{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.show.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#galleryContainer {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#galleryContainer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#galleryContainer img {
+  width: 600px;
+  border-radius: 5px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  width: auto;
+  padding: 10px 10px;
+  margin: 0px 10px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev:hover, .next:hover {
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.8);
+  color: #F05454;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+aside {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #30475E;
+}
+
+.biodata {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 #222831;
+  border-radius: 5px;
+  width: 500px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+.biodata img {
+  width: 150px;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #222831;
+  height: 50px;
+  color: #DDDDDD;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+footer div {
+  margin-top: 10px;
+  display: flex;
+}
+
+footer img {
+  width: 30px;
+  padding: 0 5px;
+}
+
+footer img:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 964px) {
+  .sentinelLogo img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 32px !important;
+  }
+
+  .jumbotron img {
+    height: 100%;
+  }
+
+  #sentinel {
+    flex-direction: column;
+    padding: 50px 10px;
+  }
+  
+  .sentinelLogo {
+    flex-basis: 50%;
+  }
+
+  .sentinelInfo {
+    flex-basis: 50%;
+    padding: 20px 20px 0 20px;
+  }
+
+  .sentinelLogo img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .sage, .cypher {
+    flex-direction: column;
+  }
+
+  .killjoy, .chamber {
+    flex-direction: column;
+  }
+
+  #galleryContainer img {
+    width: 400px;
+  }
+
+}
+
+@media screen and (max-width: 532px) {
+  .burgerBtn {
+    display: block;
+    align-self: center;
+    padding-right: 30px;
+  }
+
+  .navBtn {
+    display: none;  
+  }
+
+  .navBtnActive {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 100%;
+    height: 200px;
+    background-color: #222831;
+    text-align: center;
+    position: fixed;
+    right: 0;
+    top: 50px;
+    padding: 20px 0;
+    transition: all .5s;
+  }
+
+  li {
+    display: block;
+    padding: 5px 0;
+  }
+
+  #galleryContainer img {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #galleryContainer img {
+    width: 200px;
+  }
+}
